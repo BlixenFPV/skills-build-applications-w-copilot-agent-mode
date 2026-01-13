@@ -20,6 +20,8 @@ from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import os
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -43,8 +45,9 @@ def api_root(request):
         'workouts': base_url + 'workouts/',
     })
 
+# Ensure HTTPS compatibility for Codespaces
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', api_root, name='api_root'),
     path('api/', include(router.urls)),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
