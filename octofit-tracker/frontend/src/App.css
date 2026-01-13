@@ -1,16 +1,76 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #e3f0ff 0%, #f7e9ff 100%);
+  color: #222;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+}
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link {
+  color: #f7e9ff !important;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+.navbar-nav .nav-link.active {
+  color: #ffd700 !important;
+}
+
+.card {
+  background: #fff8fc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(106, 17, 203, 0.08);
+}
+.card-title {
+  color: #6a11cb;
+  font-weight: bold;
+}
+
+.table {
+  background: #f7e9ff;
+  border-radius: 0.5rem;
+}
+.table-dark th {
+  background: #6a11cb !important;
+  color: #fff !important;
+}
+.btn-success, .btn-primary, .btn-lg {
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(37, 117, 252, 0.08);
+}
+.btn-success:hover, .btn-primary:hover, .btn-lg:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: #ffd700;
+}
+
+a {
+  color: #2575fc;
+  text-decoration: none;
+}
+a:hover {
+  color: #6a11cb;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #6a11cb;
+  font-weight: bold;
+}
 }
 
 .App-header {
